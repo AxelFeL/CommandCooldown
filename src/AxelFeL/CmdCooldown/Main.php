@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener {
                 self::$players[$player->getName()] = time() + 4;
             }else{
                 $player->sendMessage("§cYou need to wait §6" . self::$players[$player->getName()] - time() . " §cseconds to use command again.");
-                $event->cancel(\true);
+                $event->cancel();
                 return false;
             }
         }
