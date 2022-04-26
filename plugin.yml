@@ -1,0 +1,5 @@
+name: CommandCooldown
+api: 4.0.0
+main: AxelFeL\CmdCooldown\Main
+author: [EngincanErgunGG, AxelFeL]
+version: 1.0.0
