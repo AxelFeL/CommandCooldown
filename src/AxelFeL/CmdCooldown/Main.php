@@ -30,6 +30,7 @@ class Main extends PluginBase implements Listener {
     public function onCommandPre(PlayerCommandPreprocessEvent $event){
         $player = $event->getPlayer();
         $str = str_split($event->getMessage());
+        if ($event->isCancelled()) return;
         if ($str[0] == "/" or $str[0] == "./"){
             if (!$this->getServer()->isOp($player->getName())){
                 if (time() >= self::$players[$player->getName()]){
